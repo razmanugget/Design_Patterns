@@ -75,6 +75,13 @@
                             <constraint firstItem="t5e-vM-5ch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tN7-29-kPV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outlet property="answerLabel" destination="t5e-vM-5ch" id="d3W-Hm-GV4"/>
+                            <outlet property="correctCountLabel" destination="uLJ-2l-k5G" id="mSG-Td-t9o"/>
+                            <outlet property="hintLabel" destination="hbE-kp-N6M" id="GWB-5U-85E"/>
+                            <outlet property="incorrectCountLabel" destination="eS9-l9-6Ed" id="2eK-sp-e7E"/>
+                            <outlet property="promptLabel" destination="4aa-I6-Tli" id="03A-lF-jui"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
