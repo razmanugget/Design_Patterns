@@ -26,21 +26,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqP-1e-G0n">
-                                                    <rect key="frame" x="15" y="11" width="34" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqP-1e-G0n">
+                                                    <rect key="frame" x="15" y="11" width="312" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esf-44-CQ6">
-                                                    <rect key="frame" x="318" y="11" width="25" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esf-44-CQ6">
+                                                    <rect key="frame" x="335" y="11" width="25" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mqP-1e-G0n" firstAttribute="leading" secondItem="gFj-kM-RiY" secondAttribute="leadingMargin" id="2Jr-LY-1Y9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="esf-44-CQ6" secondAttribute="trailing" id="Dzm-YO-qL5"/>
+                                                <constraint firstItem="mqP-1e-G0n" firstAttribute="top" secondItem="gFj-kM-RiY" secondAttribute="topMargin" id="F17-CU-m2L"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="mqP-1e-G0n" secondAttribute="bottom" id="ISj-Tg-0MT"/>
+                                                <constraint firstItem="esf-44-CQ6" firstAttribute="leading" secondItem="mqP-1e-G0n" secondAttribute="trailing" constant="8" id="exn-fM-TJ6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="esf-44-CQ6" secondAttribute="bottom" id="mkN-nJ-iZZ"/>
+                                                <constraint firstItem="esf-44-CQ6" firstAttribute="top" secondItem="gFj-kM-RiY" secondAttribute="topMargin" id="rgM-qn-65U"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
