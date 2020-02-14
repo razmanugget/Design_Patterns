@@ -14,4 +14,3 @@ public struct Question {
    public let prompt: String
 }
 
-

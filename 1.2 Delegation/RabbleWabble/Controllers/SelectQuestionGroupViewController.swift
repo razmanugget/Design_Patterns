@@ -21,14 +21,21 @@ public class SelectQuestionGroupViewController: UIViewController {
    public let questionGroups = QuestionGroup.allGroups()
    private var selectedQuestionGroup: QuestionGroup!
    
+}
+
+
+// MARK: - UITableViewDataSource
+extension SelectQuestionGroupViewController: UITableViewDataSource {
    
-//   (_ tableView: UITableView, numberOfRowsInSection section: Int)
-//   -> Int {
-//   return questionGroups.count
-//   }
-//
-//   public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
-//      -> UITableViewCell {
-//         return UITableViewCell()
-//   }
+   public func tableView(_ tableView: UITableView,
+                         numberOfRowsInSection section: Int)
+      -> Int {
+         return questionGroups.count
+   }
+   
+   public func tableView(_ tableView: UITableView,
+                         cellForRowAt indexPath: IndexPath)
+      -> UITableViewCell {
+         return UITableViewCell()
+   }
 }
