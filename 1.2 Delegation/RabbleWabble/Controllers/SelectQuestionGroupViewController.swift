@@ -37,6 +37,9 @@ extension SelectQuestionGroupViewController: UITableViewDataSource {
    public func tableView(_ tableView: UITableView,
                          cellForRowAt indexPath: IndexPath)
       -> UITableViewCell {
-         return UITableViewCell()
+         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionGroupCell") as! QuestionGroupCell
+         let questionGroup = questionGroups[indexPath.row]
+         cell.titleLabel.text = questionGroup.title
+         return cell
    }
 }
