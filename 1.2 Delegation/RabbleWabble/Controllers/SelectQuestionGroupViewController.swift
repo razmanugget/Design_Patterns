@@ -12,6 +12,7 @@ public class SelectQuestionGroupViewController: UIViewController {
    
    // MARK: - Outlets
    @IBOutlet internal var tableView: UITableView! {
+      // to prevent the table view from drawing unnecessary empty cells
       didSet {
          tableView.tableFooterView = UIView()
       }
