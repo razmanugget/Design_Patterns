@@ -59,23 +59,17 @@ public class QuestionViewController: UIViewController {
    }
    
    
+   // MARK: - Methods
    private func showNextQuestion() {
       questionIndex += 1
       guard questionIndex < questionGroup.questions.count else {
-         // TODO: - handle this
+         delegate?.questionViewController(self, didComplete: questionGroup)
          print("study over")
          if correctCount > incorrectCount {
             print("awesome")
          }
          return
       }
-      showQuestion()
-   }
-   
-   // MARK: - VC Life Cycle
-   public override func viewDidLoad() {
-      
-      super.viewDidLoad()
       showQuestion()
    }
    
@@ -90,6 +84,31 @@ public class QuestionViewController: UIViewController {
       questionView.hintLabel.isHidden = true
       
       questionIndexItem.title = "\(questionIndex + 1)/" + "\(questionGroup.questions.count)"
+   }
+   
+   private func setupCancelButton() {
+      let action = #selector(handleCancelPressed(sender:))
+      let image = UIImage(named: "ic_menu")
+      navigationItem.leftBarButtonItem =
+         UIBarButtonItem(image: image,
+                         landscapeImagePhone: nil,
+                         style: .plain,
+                         target: self,
+                         action: action)
+   }
+   
+   @objc private func handleCancelPressed(sender: UIBarButtonItem) {
+      delegate?.questionViewController(self,
+                                       didCancel: questionGroup,
+                                       at: questionIndex)
+   }
+   
+   
+   // MARK: - VC Life Cycle
+   public override func viewDidLoad() {
+      super.viewDidLoad()
+      setupCancelButton()
+      showQuestion()
    }
    
 }
