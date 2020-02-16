@@ -43,3 +43,26 @@ extension SelectQuestionGroupViewController: UITableViewDataSource {
          return cell
    }
 }
+
+
+// MARK: - UITableViewDelegate
+extension SelectQuestionGroupViewController: UITableViewDelegate {
+   // set the question group here because if it was triggered on didSelect, it would be nil
+   public func tableView(_ tableView: UITableView,
+                         willSelectRowAt indexPath: IndexPath)
+      -> IndexPath? {
+         selectedQuestionGroup = questionGroups[indexPath.row]
+         return indexPath
+   }
+   // this deselect is to not see selected cells when you return to menu
+   public func tableView(_ tableView: UITableView,
+                         didSelectRowAt indexPath: IndexPath) {
+      tableView.deselectRow(at: indexPath, animated: true)
+   }
+   
+   public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      guard let viewController = segue.destination as? QuestionViewController else { return }
+      viewController.questionGroup = selectedQuestionGroup
+   }
+}
+
