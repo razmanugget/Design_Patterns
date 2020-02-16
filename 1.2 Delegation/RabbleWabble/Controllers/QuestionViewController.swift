@@ -26,6 +26,13 @@ public class QuestionViewController: UIViewController {
       return (view as! QuestionView)
    }
    
+   private lazy var questionIndexItem: UIBarButtonItem = {
+      let item = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+      item.tintColor = .black
+      navigationItem.rightBarButtonItem = item
+      return item
+   } ()
+   
    
    // MARK: - Actions
    @IBAction func toggleAnswerLabels(_ sender: Any) {
@@ -75,6 +82,8 @@ public class QuestionViewController: UIViewController {
       
       questionView.answerLabel.isHidden = true
       questionView.hintLabel.isHidden = true
+      
+      questionIndexItem.title = "\(questionIndex + 1)/" + "\(questionGroup.questions.count)"
    }
    
 }
