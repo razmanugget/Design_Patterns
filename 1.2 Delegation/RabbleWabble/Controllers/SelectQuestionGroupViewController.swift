@@ -63,6 +63,17 @@ extension SelectQuestionGroupViewController: UITableViewDelegate {
    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       guard let viewController = segue.destination as? QuestionViewController else { return }
       viewController.questionGroup = selectedQuestionGroup
+      viewController.delegate = self
    }
 }
 
+
+// MARK: - QuestionViewControllerDelegate
+extension SelectQuestionGroupViewController: QuestionViewControllerDelegate {
+   public func questionViewController(_ viewController: QuestionViewController, didCancel questionGroup: QuestionGroup, at questionIndex: Int) {
+      navigationController?.popToViewController(self, animated: true)
+   }
+   public func questionViewController(_ viewController: QuestionViewController, didComplete questionGroup: QuestionGroup) {
+      navigationController?.popToViewController(self, animated: true)
+   }
+}

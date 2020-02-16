@@ -8,9 +8,15 @@
 
 import UIKit
 
+public protocol QuestionViewControllerDelegate: class {
+   func questionViewController(_ viewController: QuestionViewController, didCancel questionGroup: QuestionGroup, at questionIndex: Int)
+   func questionViewController(_ viewController: QuestionViewController, didComplete questionGroup: QuestionGroup)
+}
+
 public class QuestionViewController: UIViewController {
    
    // MARK: - Properties
+   public weak var delegate: QuestionViewControllerDelegate?
    public var questionGroup: QuestionGroup! {
       didSet {
          navigationItem.title = questionGroup.title
