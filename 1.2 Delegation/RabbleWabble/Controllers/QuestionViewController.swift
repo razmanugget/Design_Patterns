@@ -9,8 +9,11 @@
 import UIKit
 
 public protocol QuestionViewControllerDelegate: class {
-   func questionViewController(_ viewController: QuestionViewController, didCancel questionGroup: QuestionGroup, at questionIndex: Int)
-   func questionViewController(_ viewController: QuestionViewController, didComplete questionGroup: QuestionGroup)
+   func questionViewController(_ viewController: QuestionViewController,
+                               didCancel questionGroup: QuestionGroup,
+                               at questionIndex: Int)
+   func questionViewController(_ viewController: QuestionViewController,
+                               didComplete questionGroup: QuestionGroup)
 }
 
 public class QuestionViewController: UIViewController {
@@ -33,7 +36,10 @@ public class QuestionViewController: UIViewController {
    }
    
    private lazy var questionIndexItem: UIBarButtonItem = {
-      let item = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+      let item = UIBarButtonItem(title: "",
+                                 style: .plain,
+                                 target: nil,
+                                 action: nil)
       item.tintColor = .black
       navigationItem.rightBarButtonItem = item
       return item

@@ -70,10 +70,16 @@ extension SelectQuestionGroupViewController: UITableViewDelegate {
 
 // MARK: - QuestionViewControllerDelegate
 extension SelectQuestionGroupViewController: QuestionViewControllerDelegate {
-   public func questionViewController(_ viewController: QuestionViewController, didCancel questionGroup: QuestionGroup, at questionIndex: Int) {
+   public func questionViewController(
+      _ viewController: QuestionViewController,
+      didCancel questionGroup: QuestionGroup,
+      at questionIndex: Int) {
       navigationController?.popToViewController(self, animated: true)
    }
-   public func questionViewController(_ viewController: QuestionViewController, didComplete questionGroup: QuestionGroup) {
+   
+   public func questionViewController(
+      _ viewController: QuestionViewController,
+      didComplete questionGroup: QuestionGroup) {
       navigationController?.popToViewController(self, animated: true)
    }
 }

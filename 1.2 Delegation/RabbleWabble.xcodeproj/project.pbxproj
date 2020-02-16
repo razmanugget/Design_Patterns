@@ -101,7 +101,6 @@
 				F455E17923F1B96F00A38556 /* Questions.swift */,
 				F455E17B23F1B9C900A38556 /* QuestionGroup.swift */,
 				F455E17D23F1BA1100A38556 /* QuestionGroupData.swift */,
-				F486D31723F8208C008D28E2 /* QuestionGroupCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,6 +120,7 @@
 				F455E16623F1927E00A38556 /* Main.storyboard */,
 				F455E18123F1BA8500A38556 /* LaunchScreen.storyboard */,
 				F4AAD97223F35198005016AD /* QuestionView.swift */,
+				F486D31723F8208C008D28E2 /* QuestionGroupCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
