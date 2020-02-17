@@ -15,11 +15,7 @@ public protocol QuestionViewControllerDelegate: class {
                                didComplete questionStrategy: QuestionStrategy)
 }
 
-public var questionStrategy: QuestionStrategy! {
-   didSet {
-      navigationItem.title = questionStrategy.title
-   }
-}
+
 
 public class QuestionViewController: UIViewController {
    
@@ -33,6 +29,12 @@ public class QuestionViewController: UIViewController {
    public var questionView: QuestionView! {
       guard isViewLoaded else { return nil }
       return (view as! QuestionView)
+   }
+   
+   public var questionStrategy: QuestionStrategy! {
+      didSet {
+         navigationItem.title = questionStrategy.title
+      }
    }
    
    private lazy var questionIndexItem: UIBarButtonItem = {
@@ -77,7 +79,7 @@ public class QuestionViewController: UIViewController {
    }
    
    private func showQuestion() {
-      let question = questionGroup.currentQuestion()
+      let question = questionStrategy.currentQuestion()
       
       questionView.answerLabel.text = question.answer
       questionView.promptLabel.text = question.prompt
@@ -86,7 +88,7 @@ public class QuestionViewController: UIViewController {
       questionView.answerLabel.isHidden = true
       questionView.hintLabel.isHidden = true
       
-      questionIndexItem.title = QuestionStrategy.questionIndexTitle()
+      questionIndexItem.title = questionStrategy.questionIndexTitle()
    }
    
    private func setupCancelButton() {
