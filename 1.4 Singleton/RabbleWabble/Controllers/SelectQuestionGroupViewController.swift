@@ -83,3 +83,12 @@ extension SelectQuestionGroupViewController: QuestionViewControllerDelegate {
       navigationController?.popToViewController(self, animated: true)
    }
 }
+
+public class MySingletonPlus {
+  static let shared = MySingletonPlus()
+
+  public init() { }
+}
+
+let singletonPlus = MySingletonPlus.shared
+let singletonPlus2 = MySingletonPlus()

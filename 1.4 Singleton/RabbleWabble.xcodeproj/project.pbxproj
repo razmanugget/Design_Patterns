@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F41E4E4C23FC3578005C3B06 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E4E4B23FC3578005C3B06 /* AppSettings.swift */; };
 		F455E16123F1927E00A38556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F455E16023F1927E00A38556 /* AppDelegate.swift */; };
 		F455E16323F1927E00A38556 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F455E16223F1927E00A38556 /* SceneDelegate.swift */; };
 		F455E16523F1927E00A38556 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F455E16423F1927E00A38556 /* QuestionViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F41E4E4B23FC3578005C3B06 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		F455E15D23F1927E00A38556 /* RabbleWabble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RabbleWabble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F455E16023F1927E00A38556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F455E16223F1927E00A38556 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		F455E17623F19A6B00A38556 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F41E4E4B23FC3578005C3B06 /* AppSettings.swift */,
 				F455E17923F1B96F00A38556 /* Questions.swift */,
 				F455E17B23F1B9C900A38556 /* QuestionGroup.swift */,
 				F455E17D23F1BA1100A38556 /* QuestionGroupData.swift */,
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41E4E4C23FC3578005C3B06 /* AppSettings.swift in Sources */,
 				F455E16523F1927E00A38556 /* QuestionViewController.swift in Sources */,
 				F455E17A23F1B96F00A38556 /* Questions.swift in Sources */,
 				F455E16123F1927E00A38556 /* AppDelegate.swift in Sources */,
