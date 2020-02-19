@@ -15,6 +15,7 @@ public class AppSettings {
    }
    
    // MARK: - Static Properties
+   // the singleton
    public static let shared = AppSettings()
    
    
@@ -24,7 +25,8 @@ public class AppSettings {
          let rawValue = userDefaults.integer(forKey: Keys.questionStrategy)
          return QuestionStrategyType(rawValue: rawValue)!
       } set {
-         userDefaults.set(newValue.rawValue, forKey: Keys.questionStrategy)
+         userDefaults.set(newValue.rawValue,
+                          forKey: Keys.questionStrategy)
       }
    }
    private let userDefaults = UserDefaults.standard
