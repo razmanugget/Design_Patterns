@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4165F8523FD38CC009E2802 /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4165F8423FD38CC009E2802 /* AppSettingsViewController.swift */; };
 		F41E4E4C23FC3578005C3B06 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E4E4B23FC3578005C3B06 /* AppSettings.swift */; };
 		F455E16123F1927E00A38556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F455E16023F1927E00A38556 /* AppDelegate.swift */; };
 		F455E16323F1927E00A38556 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F455E16223F1927E00A38556 /* SceneDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4165F8423FD38CC009E2802 /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		F41E4E4B23FC3578005C3B06 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		F455E15D23F1927E00A38556 /* RabbleWabble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RabbleWabble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F455E16023F1927E00A38556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				F455E16423F1927E00A38556 /* QuestionViewController.swift */,
 				F4F68E3423F5E227001E3F15 /* SelectQuestionGroupViewController.swift */,
+				F4165F8423FD38CC009E2802 /* AppSettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				F490920823FABB44005B392A /* RandomQuestionStrategy.swift in Sources */,
 				F490920423FAA27D005B392A /* QuestionStrategy.swift in Sources */,
 				F455E17C23F1B9C900A38556 /* QuestionGroup.swift in Sources */,
+				F4165F8523FD38CC009E2802 /* AppSettingsViewController.swift in Sources */,
 				F4F68E3523F5E227001E3F15 /* SelectQuestionGroupViewController.swift in Sources */,
 				F455E16323F1927E00A38556 /* SceneDelegate.swift in Sources */,
 			);
