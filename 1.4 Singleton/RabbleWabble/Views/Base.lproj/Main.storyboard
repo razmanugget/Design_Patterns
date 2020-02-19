@@ -71,14 +71,49 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PHO-12-oVr"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Question Group" id="rZ0-6n-Rc8"/>
+                    <navigationItem key="navigationItem" title="Select Question Group" id="rZ0-6n-Rc8">
+                        <barButtonItem key="leftBarButtonItem" image="ic_settings" id="qdf-qe-fMc">
+                            <connections>
+                                <segue destination="ceW-u9-sMI" kind="show" id="6rd-Tg-Mhv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qlH-f5-4rb" id="dze-Ta-CeH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRX-O5-hR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="360.80000000000001" y="103.89805097451276"/>
+            <point key="canvasLocation" x="255" y="104"/>
+        </scene>
+        <!--App Settings-->
+        <scene sceneID="N9r-6o-3Zc">
+            <objects>
+                <tableViewController title="App Settings" id="ceW-u9-sMI" customClass="AppSettingsViewController" customModule="RabbleWabble" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dxs-Aq-V1E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bRt-qz-RPI">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bRt-qz-RPI" id="bxK-Zg-GZb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ceW-u9-sMI" id="Aj9-CU-swU"/>
+                            <outlet property="delegate" destination="ceW-u9-sMI" id="OGe-Mf-3g9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="B8A-2f-TO5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4aq-Hv-VCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="786"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -173,7 +208,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1077.5999999999999" y="101.19940029985008"/>
+            <point key="canvasLocation" x="1041" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qLs-xq-3Hm">
@@ -197,5 +232,6 @@
     <resources>
         <image name="ic_circle_check" width="80" height="80"/>
         <image name="ic_circle_x" width="80" height="80"/>
+        <image name="ic_settings" width="26" height="26"/>
     </resources>
 </document>

@@ -21,10 +21,10 @@ public class AppSettings {
    // MARK: - Instance Properties
    public var questionStrategyType: QuestionStrategyType {
       get {
-         let rawValue = UserDefaults.integer(forKey: Keys.questionStrategy)
+         let rawValue = userDefaults.integer(forKey: Keys.questionStrategy)
          return QuestionStrategyType(rawValue: rawValue)!
       } set {
-         UserDefaults.set(newValue.rawValue, forKey: Keys.questionStrategy)
+         userDefaults.set(newValue.rawValue, forKey: Keys.questionStrategy)
       }
    }
    private let userDefaults = UserDefaults.standard
@@ -32,6 +32,13 @@ public class AppSettings {
    
    // MARK: - Object Lifecycle
    private init() { }
+   
+   
+   // MARK: - Instance Methods
+     public func questionStrategy(for questionGroup: QuestionGroup)
+        -> QuestionStrategy {
+        return questionStrategyType.questionStrategy(for: questionGroup)
+     }
 }
 
 
@@ -40,11 +47,7 @@ public enum QuestionStrategyType: Int, CaseIterable {
    case random
    case sequential
    
-   // MARK: - Instance Methods
-   public func questionStrategy(for questionGroup: QuestionGroup)
-      -> QuestionStrategy {
-      return QuestionStrategyType.questionStrategy(for: questionGroup)
-   }
+  
    
    public func title() -> String {
       switch self {
