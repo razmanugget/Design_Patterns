@@ -20,6 +20,7 @@
 		F455E18023F1BA6700A38556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F455E17F23F1BA6700A38556 /* Assets.xcassets */; };
 		F455E18223F1BA8500A38556 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F455E18123F1BA8500A38556 /* LaunchScreen.storyboard */; };
 		F46D66A5240028A000D80CE6 /* QuestionGroupCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D66A4240028A000D80CE6 /* QuestionGroupCaretaker.swift */; };
+		F46D66A724002EDD00D80CE6 /* QuestionGroupData.json in Resources */ = {isa = PBXBuildFile; fileRef = F46D66A624002EDD00D80CE6 /* QuestionGroupData.json */; };
 		F486D31823F8208C008D28E2 /* QuestionGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486D31723F8208C008D28E2 /* QuestionGroupCell.swift */; };
 		F490920423FAA27D005B392A /* QuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F490920323FAA27D005B392A /* QuestionStrategy.swift */; };
 		F490920623FAA3CB005B392A /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F490920523FAA3CB005B392A /* SequentialQuestionStrategy.swift */; };
@@ -44,6 +45,7 @@
 		F455E17F23F1BA6700A38556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F455E18123F1BA8500A38556 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F46D66A4240028A000D80CE6 /* QuestionGroupCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCaretaker.swift; sourceTree = "<group>"; };
+		F46D66A624002EDD00D80CE6 /* QuestionGroupData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuestionGroupData.json; sourceTree = "<group>"; };
 		F486D31723F8208C008D28E2 /* QuestionGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCell.swift; sourceTree = "<group>"; };
 		F490920323FAA27D005B392A /* QuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStrategy.swift; sourceTree = "<group>"; };
 		F490920523FAA3CB005B392A /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				F455E17F23F1BA6700A38556 /* Assets.xcassets */,
 				F455E16E23F1928200A38556 /* Info.plist */,
+				F46D66A624002EDD00D80CE6 /* QuestionGroupData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F455E18223F1BA8500A38556 /* LaunchScreen.storyboard in Resources */,
+				F46D66A724002EDD00D80CE6 /* QuestionGroupData.json in Resources */,
 				F455E18023F1BA6700A38556 /* Assets.xcassets in Resources */,
 				F455E16823F1927E00A38556 /* Main.storyboard in Resources */,
 			);

@@ -20,10 +20,16 @@ public class SelectQuestionGroupViewController: UIViewController {
    
    
    // MARK: - Properties
-   public let questionGroups = QuestionGroup.allGroups()
-   private var selectedQuestionGroup: QuestionGroup!
+   private let questionGroupCaretaker = QuestionGroupCaretaker()
+   private var questionGroups: [QuestionGroup] {
+      return questionGroupCaretaker.questionGroups
+   }
+   private var selectedQuestionGroup: QuestionGroup! {
+      get { return
+         questionGroupCaretaker.selectedQuestionGroup }
+      set { questionGroupCaretaker.selectedQuestionGroup = newValue }
+   }
    private let appSettings = AppSettings.shared
-   
 }
 
 
@@ -87,9 +93,9 @@ extension SelectQuestionGroupViewController: QuestionViewControllerDelegate {
 }
 
 public class MySingletonPlus {
-  static let shared = MySingletonPlus()
-
-  public init() { }
+   static let shared = MySingletonPlus()
+   
+   public init() { }
 }
 
 let singletonPlus = MySingletonPlus.shared
