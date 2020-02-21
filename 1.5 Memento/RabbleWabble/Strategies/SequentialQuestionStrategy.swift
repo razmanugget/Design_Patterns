@@ -10,8 +10,14 @@ import Foundation
 
 public class SequentialQuestionStrategy: QuestionStrategy {
    // MARK: - Properties
-   public var correctCount: Int = 0
-   public var incorrectCount: Int = 0
+   public var correctCount: Int {
+      get { return questionGroup.score.correctCount }
+      set { questionGroup.score.correctCount = newValue }
+   }
+   public var incorrectCount: Int {
+      get { return questionGroup.score.incorrectCount }
+      set { questionGroup.score.incorrectCount = newValue }
+   }
    private let questionGroup: QuestionGroup
    private var questionIndex = 0
    
