@@ -49,8 +49,6 @@ public enum QuestionStrategyType: Int, CaseIterable {
    case random
    case sequential
    
-  
-   
    public func title() -> String {
       switch self {
       case .random:
