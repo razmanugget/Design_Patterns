@@ -59,6 +59,15 @@ extension SelectQuestionGroupViewController: UITableViewDataSource {
          let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionGroupCell") as! QuestionGroupCell
          let questionGroup = questionGroups[indexPath.row]
          cell.titleLabel.text = questionGroup.title
+         // setting up the Subscriber
+         cell.percentageSubscriber = questionGroup.score.$runningPercentage
+            // ensure events are delivered on the main queue
+            .receive(on: DispatchQueue.main)
+            // transform the value to % based on a map
+            .map() {
+               return String(format: "%.0f %%", round(100 * $0)) }
+            // set the value to text on cell.percentageLabel
+            .assign(to: \.text, on: cell.percentageLabel)
          return cell
    }
 }

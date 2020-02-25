@@ -43,10 +43,16 @@ public class QuestionGroup: Codable {
          }
          runningPercentage = Double(correctCount) / Double(totalCount)
       }
+      
+      public func reset() {
+         correctCount = 0
+         incorrectCount = 0
+      }
    }
    
    public let questions: [Question]
-   public var score: Score
+   // only this class can set score
+   public private(set) var score: Score
    public let title: String
    
    public init(questions: [Question],
