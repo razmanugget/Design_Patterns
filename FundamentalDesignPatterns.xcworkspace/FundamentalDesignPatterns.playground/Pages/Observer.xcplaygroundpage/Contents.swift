@@ -31,7 +31,11 @@ let publisher = user.$name
 var subscriber: AnyCancellable? = publisher.sink() {
     print("User's name is \($0)")
 }
-// change the
+// change the value
 user.name = "Vicki"
+
+// stop subscribing
 subscriber = nil
+
+// doesn't get pushed out
 user.name = "Ray has left the building"
