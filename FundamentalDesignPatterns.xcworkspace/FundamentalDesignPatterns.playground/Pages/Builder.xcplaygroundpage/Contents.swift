@@ -3,20 +3,29 @@
  
  # Builder
  - - - - - - - - - -
+ ## Creational Pattern
+ - Important:
+ • allows complex objects to be created step-by-step instead of all-at-once via a large initializer
+ \
+• good to use when a product requires multiple inputs
+ 
+ > a lot of trouble. convenience initializers may be easier
+ 
  ![Builder Diagram](Builder_Diagram.png)
  
- The builder pattern allows complex objects to be created step-by-step instead of all-at-once via a large initializer.
+ - Callout(Product):
+ • the complex object to be created
  
- The builder pattern involves three parts:
+ * Callout(Builder):
+ • accepts inputs step-by-step and ultimately creates the product
  
- 1. The **product** is the complex object to be created.
+ - Callout(Director):
+ • supplies the builder with step-by-step inputs and requests the builder create the product once everything has been provided
  
- 2. The **builder** accepts inputs step-by-step and ultimately creates the product.
- 
- 3. The **director** supplies the builder with step-by-step inputs and requests the builder create the product once everything has been provided.
- 
+
  
  ## Code Example
+ 
  */
 import Foundation
 
@@ -75,7 +84,7 @@ public class HamburgerBuilder {
    public private(set) var meat: Meat = .beef
    public private(set) var sauces: Sauces = []
    public private(set) var toppings: Toppings = []
-      
+   
    // these public methods are to allow for changes
    public func addSauces(_ sauce: Sauces) {
       sauces.insert(sauce)
@@ -93,7 +102,7 @@ public class HamburgerBuilder {
    // private set forces validation before setting properties
    private var soldOutMeats: [Meat] = [.kitten]
    
-
+   
    public func setMeat(_ meat: Meat) throws {
       guard isAvailable(meat) else { throw Error.soldOut }
       self.meat = meat
