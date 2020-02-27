@@ -19,6 +19,7 @@
 		F455E17E23F1BA1100A38556 /* QuestionGroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F455E17D23F1BA1100A38556 /* QuestionGroupData.swift */; };
 		F455E18023F1BA6700A38556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F455E17F23F1BA6700A38556 /* Assets.xcassets */; };
 		F455E18223F1BA8500A38556 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F455E18123F1BA8500A38556 /* LaunchScreen.storyboard */; };
+		F46A49D52407E1240066732A /* QuestionGroupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A49D42407E1240066732A /* QuestionGroupBuilder.swift */; };
 		F46D66A5240028A000D80CE6 /* QuestionGroupCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D66A4240028A000D80CE6 /* QuestionGroupCaretaker.swift */; };
 		F46D66A724002EDD00D80CE6 /* QuestionGroupData.json in Resources */ = {isa = PBXBuildFile; fileRef = F46D66A624002EDD00D80CE6 /* QuestionGroupData.json */; };
 		F46D66A92400329A00D80CE6 /* BaseQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D66A82400329A00D80CE6 /* BaseQuestionStrategy.swift */; };
@@ -50,6 +51,7 @@
 		F455E17D23F1BA1100A38556 /* QuestionGroupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionGroupData.swift; sourceTree = "<group>"; };
 		F455E17F23F1BA6700A38556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F455E18123F1BA8500A38556 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F46A49D42407E1240066732A /* QuestionGroupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupBuilder.swift; sourceTree = "<group>"; };
 		F46D66A4240028A000D80CE6 /* QuestionGroupCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCaretaker.swift; sourceTree = "<group>"; };
 		F46D66A624002EDD00D80CE6 /* QuestionGroupData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuestionGroupData.json; sourceTree = "<group>"; };
 		F46D66A82400329A00D80CE6 /* BaseQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseQuestionStrategy.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				F455E17423F19A5300A38556 /* AppDelegate */,
+				F46A49D32407E0FB0066732A /* Builders */,
 				F4165F8623FEE0F1009E2802 /* Caretakers */,
 				F455E17523F19A5E00A38556 /* Controllers */,
 				F455E17623F19A6B00A38556 /* Models */,
@@ -170,6 +173,14 @@
 				F4AAD97223F35198005016AD /* QuestionView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F46A49D32407E0FB0066732A /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				F46A49D42407E1240066732A /* QuestionGroupBuilder.swift */,
+			);
+			path = Builders;
 			sourceTree = "<group>";
 		};
 		F490920223FAA229005B392A /* Strategies */ = {
@@ -265,6 +276,7 @@
 				F455E17E23F1BA1100A38556 /* QuestionGroupData.swift in Sources */,
 				F4FE59E32406A6A60019469B /* JapaneseTextField.swift in Sources */,
 				F486D31823F8208C008D28E2 /* QuestionGroupCell.swift in Sources */,
+				F46A49D52407E1240066732A /* QuestionGroupBuilder.swift in Sources */,
 				F490920623FAA3CB005B392A /* SequentialQuestionStrategy.swift in Sources */,
 				F4FE59DB2406A5890019469B /* CreateQuestionGroupViewController.swift in Sources */,
 				F490920823FABB44005B392A /* RandomQuestionStrategy.swift in Sources */,
