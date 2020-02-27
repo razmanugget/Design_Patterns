@@ -36,8 +36,8 @@ public class SelectQuestionGroupViewController: UIViewController {
       super.viewDidLoad()
       questionGroups.forEach {
          print("\($0.title): " +
-         "correctCount \($0.score.correctCount), " +
-         "incorrectCount \($0.score.incorrectCount)"
+            "correctCount \($0.score.correctCount), " +
+            "incorrectCount \($0.score.incorrectCount)"
          )
       }
    }
@@ -88,11 +88,8 @@ extension SelectQuestionGroupViewController: UITableViewDelegate {
       tableView.deselectRow(at: indexPath, animated: true)
    }
    
-   public override func prepare(for segue: UIStoryboardSegue,
-                                sender: Any?) {
-      guard let viewController = segue.destination as? QuestionViewController else { return }
-      viewController.questionStrategy = appSettings.questionStrategy(for: questionGroupCaretaker)
-      viewController.delegate = self
+   public override func prepare(
+  
    }
 }
 
@@ -120,3 +117,21 @@ public class MySingletonPlus {
 
 let singletonPlus = MySingletonPlus.shared
 let singletonPlus2 = MySingletonPlus()
+
+
+// MARK: - CreateQuestionGroupViewControllerDelegate
+extension SelectQuestionGroupViewController: CreateQuestionGroupViewControllerDelegate {
+   
+   public func createQuestionGroupViewControllerDidCancel(_ viewController: CreateQuestionGroupViewController)
+   {
+      dismiss(animated: true, completion: nil)
+   }
+   
+   public func createQuestionGroupViewController(_ viewController: CreateQuestionGroupViewController, created questionGroup: QuestionGroup) {
+      questionGroupCaretaker.questionGroups.append(questionGroup)
+      try? questionGroupCaretaker.save()
+      
+      dismiss(animated: true, completion: nil)
+      tableView.reloadData()
+   }
+}
