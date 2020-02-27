@@ -8,6 +8,39 @@
 
 import Foundation
 
+public class QuestionGroupBuilder {
+   // array created which will build the individual question objects
+   public var questions = [QuestionBuilder()]
+   public var title = ""
+   
+   public func addNewQuestion() {
+      let question = QuestionBuilder()
+      questions.append(question)
+   }
+   
+   public func removeQuestion(at index: Int) {
+      questions.remove(at: index)
+   }
+   // validate title is set and question exist, then build
+   public func build() throws -> QuestionGroup {
+      guard self.title.count > 0 else {
+         throw Error.missingTitle
+      }
+      
+      guard self.questions.count > 0 else {
+         throw Error.missingQuestions
+      }
+      
+      let questions = try self.questions.map { try $0.build() }
+      return QuestionGroup(questions: questions, title: title)
+   }
+   
+   public enum Error: String, Swift.Error {
+      case missingTitle
+      case missingQuestions
+   }
+}
+
 public class QuestionBuilder {
    public var answer = ""
    public var hint = ""
