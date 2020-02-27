@@ -89,7 +89,14 @@ extension SelectQuestionGroupViewController: UITableViewDelegate {
    }
    
    public override func prepare(
-  
+      for segue: UIStoryboardSegue, sender: Any?) {
+      if let viewController = segue.destination as? QuestionViewController {
+         viewController.questionStrategy = appSettings.questionStrategy(for: questionGroupCaretaker)
+         viewController.delegate = self
+      } else if let navController = segue.destination as? UINavigationController, let viewController = navController.topViewController as? CreateQuestionGroupViewController {
+         viewController.delegate = self
+      }
+      // if neither if stmt matches, then ignore the segue
    }
 }
 
