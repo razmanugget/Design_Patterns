@@ -135,7 +135,17 @@ extension CreateQuestionGroupViewController {
 // MARK: - UITableViewDelegate
 extension CreateQuestionGroupViewController {
    
-   // TODO: - Add `UITableViewDelegate` methods
+   public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      
+      tableView.deselectRow(at: indexPath, animated: true)
+      guard isLastIndexPath(indexPath) else { return }
+      questionGroupBuilder.addNewQuestion()
+      tableView.insertRows(at: [indexPath], with: .top)
+   }
+   // if last cell is checked, then the user is adding a cell
+   private func isLastIndexPath(_ indexPath: IndexPath) -> Bool {
+      return indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1
+   }
 }
 
 // MARK: - CreateQuestionCellDelegate
