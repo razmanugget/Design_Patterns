@@ -108,7 +108,12 @@ extension CreateQuestionGroupViewController {
             for: indexPath) as! CreateQuestionCell
          cell.delegate = self
          
-         // TODO: - Configure the cell
+         let questionBuilder = self.questionBuilder(for: indexPath)
+         cell.delegate = self
+         cell.answerTextField.text = questionBuilder.answer
+         cell.hintTextField.text = questionBuilder.hint
+         cell.indexLabel.text = "Question \(indexPath.row)"
+         cell.promptTextField.text = questionBuilder.prompt
          
          return cell
    }
