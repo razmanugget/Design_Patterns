@@ -153,25 +153,30 @@ extension CreateQuestionGroupViewController: CreateQuestionCellDelegate {
    
    public func createQuestionCell(
       _ cell: CreateQuestionCell, answerTextDidChange text: String) {
-      // TODO: - Write this
+      questionBuilder(for: cell).answer = text
    }
    
    public func createQuestionCell(
       _ cell: CreateQuestionCell, hintTextDidChange text: String) {
-      // TODO: - Write this
+      questionBuilder(for: cell).hint = text
    }
    
    public func createQuestionCell(
       _ cell: CreateQuestionCell, promptTextDidChange text: String) {
-      // TODO: - Write this
+      questionBuilder(for: cell).prompt = text
+   }
+   
+   private func questionBuilder(for cell: CreateQuestionCell) -> QuestionBuilder {
+      let indexPath = tableView.indexPath(for: cell)!
+      return questionBuilder(for: indexPath)
    }
 }
 
 // MARK: - CreateQuestionGroupTitleCellDelegate
 extension CreateQuestionGroupViewController: CreateQuestionGroupTitleCellDelegate {
    
-   public func createQuestionGroupTitleCell(
-      _ cell: CreateQuestionGroupTitleCell, titleTextDidChange text: String) {
-      // TODO: - Write this
+   public func createQuestionGroupTitleCell(_ cell: CreateQuestionGroupTitleCell,
+      titleTextDidChange text: String) {
+      questionGroupBuilder.title = text
    }
 }
